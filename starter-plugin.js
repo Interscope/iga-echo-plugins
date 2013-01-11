@@ -94,7 +94,7 @@ plugin.renderers.Item.sayHello = function(element, dom, application) {
 	var item = this;
 	item.parentRenderer("sayHello", arguments);
 	if(item.user.logged()){ // NOTE: when a user logs in via backplane the Stream is re-rendered
-		element.html("<h4>Hello "+item.user.account.name+"!</h4>");
+		element.html("<h4>Hello "+item.user.account.accounts[0].username+"!</h4>");
 	}
 };
 
